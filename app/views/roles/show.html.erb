@@ -1,0 +1,11 @@
+<p> <strong>Name:</strong> <%= @role.name %> </p>
+
+<b>Permissions</b>
+<p> Read: <%= @role.permissions[:read]=="1" ? true : false %> </p>
+
+<p> Write: <%= @role.permissions[:write]=="1" ? true : false  %> </p>
+
+<p> Destroy: <%= @role.permissions[:destroy]=="1" ? true : false  %> </p>
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>
